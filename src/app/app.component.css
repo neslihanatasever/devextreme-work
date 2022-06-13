@@ -1,0 +1,88 @@
+.a {
+  padding: 5px;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.b{
+margin-right: 30px;
+}
+
+.btn-name {
+  position: absolute;
+  right: 80px;
+  color: #fff;
+  background-color: #8bc34a;
+  font-size: 14px;
+  font-family: Lato, sans-serif;
+  border-radius: 200px;
+  line-height: 3;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding-inline: 5px;
+}
+
+.dx-group-panel-message {
+  font-size: 15px;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+
+h4 {
+  background-color: lightblue;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h6 {
+  background-color: lightblue;
+  margin-top: 0px;
+  color: white;
+}
+
+.header {
+  background: #6790c7;
+  font-size: 16px;
+  padding-top: 10px;
+  text-align: left;
+  margin-top: 0px;
+  font-family: Arial;
+  width: 100%;
+  position: static;
+  border-radius: 5px;
+  color: white;
+
+
+}
+
+.content {
+  padding-top: 5px;
+  text-align: left;
+  background-color: lightgray;
+  color: #2a2f5b;
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+  margin: 0;
+  border-radius: 5px;
+}
+
+h5 {
+  margin-left: 40px;
+
+}
+
+.dx-field-value {
+  display: flex;
+  margin-right: 200px;
+
+}
