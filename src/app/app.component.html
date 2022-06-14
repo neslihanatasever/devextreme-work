@@ -1,11 +1,12 @@
 <dx-responsive-box>
-
   <dxi-item class="header">
     <dxi-location screen="md lg" [row]="0" [col]="0" [colspan]="3"></dxi-location>
     <dxi-location screen="xs sm" [row]="0" [col]="0"></dxi-location>
+
+
     <h5>
+      <dx-button class="d" icon="contentlayout"></dx-button>
       <b>
-        <dx-button icon="contentlayout" text=""></dx-button>
         Talep</b><br>
       Taleplerinizi statülerine göre filtreleyebilir ve istediğiniz verileri görüntüleyebilirsiniz.
     </h5>
@@ -14,43 +15,46 @@
     <dxi-location screen="md lg" [row]="1" [col]="0"></dxi-location>
     <dxi-location screen="xs sm" [row]="0" [col]="0"></dxi-location>
 
-    <h5> Geri |
-      <dx-button icon="home"></dx-button>
-      <dx-button icon="chevronright"></dx-button>
+    <h5 class="e"> Geri |
+      <dx-button class="e" icon="home"></dx-button>
+      <dx-button class="e" icon="chevronright"></dx-button>
       Talep Listele
     </h5>
   </dxi-item>
 </dx-responsive-box>
 
-<!--<dx-button type="button">-->
-<!--  <div class="btn-name">Talep Aç</div>-->
-<!--</dx-button>-->
+<dx-button class="button-talep"type="button"
+  icon="textdocument"
+  text="Talep Aç">
+</dx-button>
+
 <h3>Talep Listesi</h3>
 <hr>
 <br>
 <div class="a">
   <dx-button class="b" text="Yeni Talepler" type="button"></dx-button>
-  <dx-button text="İşlemdeki Talepler" type="button"></dx-button>
-  <dx-button text="Tamamlanan Talepler" type="button"></dx-button>
-  <dx-button text="Faturalandırılanlar" type="button"></dx-button>
-  <dx-button text="İptal Edilenler" type="button"></dx-button>
+  <dx-button class="b" text="İşlemdeki Talepler" type="button"></dx-button>
+  <dx-button class="b" text="Tamamlanan Talepler" type="button"></dx-button>
+  <dx-button class="b" text="Faturalandırılanlar" type="button"></dx-button>
+  <dx-button class="b" text="İptal Edilenler" type="button"></dx-button>
 </div>
 
 <div class="dx-group-panel-message">Bu sütuna göre gruplamak için bir sütun başlığını buraya sürükleyin</div>
-<dx-data-grid [dataSource]="dataSource">
 
-  <dxo-filter-row [visible]="true"></dxo-filter-row>
-  //arama yaptığımız
+<dx-data-grid [dataSource]="dataSource" [allowColumnReordering]="true" [showBorders]="true"
+              [rowAlternationEnabled]="true" [columnWidth]="150" [showColumnLines]="true" >
+
+
   <dxo-paging [pageSize]="10"></dxo-paging>
-  <dxo-editing mode="row" [allowUpdating]="true" [allowAdding]="true">
-  </dxo-editing>
-  <dxo-editing
-    [allowUpdating]="true"
-    [allowDeleting]="true">
-  </dxo-editing>
+  <dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[10, 25, 50, 100]"
+  ></dxo-pager>
 
-  <dxi-column dataField="id" dataType="string" caption="Servis No"></dxi-column>
-  <dxi-column dataField="precedence" dataType="string" caption="Aciliyet"></dxi-column>
+
+
+  <dxi-column class="c" dataField="id" dataType="string" caption="Servis No"></dxi-column>
+  <dxi-column class="c" dataField="precedence" dataType="string" caption="Aciliyet"></dxi-column>
   <dxi-column dataField="arrivalType" dataType="string" caption="Talep Türü"></dxi-column>
   <dxi-column dataField="requestStatusName" dataType="string" caption="Statü"></dxi-column>
   <dxi-column dataField="companyName" dataType="string" caption="Cari"></dxi-column>
@@ -59,17 +63,21 @@
   <dxi-column dataField="expRequest" dataType="string" caption="Açıklama"></dxi-column>
   <dxi-column dataField="name" dataType="string" caption="Ürün"></dxi-column>
   <dxi-column dataField="createTime" dataType="date" caption="Oluşturma zamanı"></dxi-column>
-
-
-  <dxi-column type="buttons">
-    <dxi-button
-      name="save"
-      cssClass="my-class">
-    </dxi-button>
-    <dxi-button name="edit"></dxi-button>
-    <dxi-button name="delete"></dxi-button>
+  <dxi-column dataField="requestType" dataType="string" caption="Talep Türü" ></dxi-column>
+  <dxi-column caption="İşlemler" [fixed]="true" fixedPosition="right" type="button">
+    <dxi-button hint="Düzenle" icon="edit" [onClick]="click" ></dxi-button>
+    <dxi-button hint="Sil" icon="trash" [onClick]="click"></dxi-button>
   </dxi-column>
+  <dxo-editing
+    [allowUpdating]="true"
+    [allowDeleting]="true"
+    [selectTextOnEditStart]="true">
+  </dxo-editing>
 
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+
+  <dxo-scrolling columnRenderingMode="virtual"></dxo-scrolling>
 
   <dxo-header-filter [visible]="showHeaderFilter"></dxo-header-filter>
   <dxo-search-panel
@@ -77,5 +85,4 @@
     [width]="240"
     placeholder="Search..."
   ></dxo-search-panel>
-  <!--  <dx-button icon="doc"></dx-button>-->
 </dx-data-grid>

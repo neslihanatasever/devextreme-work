@@ -1,6 +1,6 @@
 .a {
   padding: 5px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   font-family: Lato, sans-serif;
   color: #fff;
@@ -8,8 +8,25 @@
   margin-left: 10px;
 }
 
-.b{
-margin-right: 30px;
+.b {
+  margin-right: 10px;
+  border-radius: 100px;
+}
+
+.c {
+
+}
+/*::ng-deep . {*/
+/*  color: white;*/
+/*}*/
+
+.d {
+  background-color: transparent;
+  position: absolute;
+  left: 15px;
+}
+.e{
+  background-color: transparent;
 }
 
 .btn-name {
@@ -36,7 +53,9 @@ margin-right: 30px;
   margin-top: 25px;
   margin-left: 15px;
 }
-
+h3{
+  margin-left: 15px;
+}
 h4 {
   background-color: lightblue;
   color: white;
@@ -74,6 +93,7 @@ h6 {
   font-family: Lato, sans-serif;
   margin: 0;
   border-radius: 5px;
+
 }
 
 h5 {
@@ -86,3 +106,15 @@ h5 {
   margin-right: 200px;
 
 }
+.button-talep {
+  position: absolute;
+  right: 25px;
+  margin: 20px;
+  color: #fff;
+  background-color: #8bc34a;
+  font-size: 14px;
+  font-family: Lato,sans-serif;
+  border-radius: 100px;
+  line-height: 1.6;
+}
+

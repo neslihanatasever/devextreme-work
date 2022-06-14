@@ -16,7 +16,9 @@ export class AppComponent {
   showHeaderFilter: any;
 
   calculateFilterExpression: any;
-
+  displayMode: any;
+  showInfo: any;
+  calculateCellValue: any;
 
   constructor(private api: allServiceProviders, private dev: DevExpressProviders) {
     // let n = new CollectiveMethod();
@@ -26,9 +28,6 @@ export class AppComponent {
     this.dataSource = dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=1')
   }
   click($event: any) {
-  }
-  backClick() {
-
   }
 }
 
