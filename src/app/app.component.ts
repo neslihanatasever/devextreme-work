@@ -27,8 +27,9 @@ export class AppComponent {
 
     this.dataSource = dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=1')
   }
-  click($event: any) {
-  }
+  asd(id: number) {
+    this.dataSource = this.dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=' + id)
+}
 }
 
 

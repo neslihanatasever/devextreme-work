@@ -11,6 +11,8 @@
 .b {
   margin-right: 10px;
   border-radius: 100px;
+  background: white;
+  color:#585c5d;
 }
 
 .c {
@@ -25,7 +27,7 @@
   position: absolute;
   left: 15px;
 }
-.e{
+.e {
   background-color: transparent;
 }
 
@@ -118,3 +120,13 @@ h5 {
   line-height: 1.6;
 }
 
+.f{
+  background: transparent;
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-family: Lato,sans-serif;
+  font-weight: 600;
+  margin-top: 50px;
+}
