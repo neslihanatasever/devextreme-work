@@ -19,6 +19,7 @@ export class AppComponent {
   displayMode: any;
   showInfo: any;
   calculateCellValue: any;
+  popupVisible: any;
 
   constructor(private api: allServiceProviders, private dev: DevExpressProviders) {
     // let n = new CollectiveMethod();
@@ -27,9 +28,12 @@ export class AppComponent {
 
     this.dataSource = dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=1')
   }
+
   asd(id: number) {
     this.dataSource = this.dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=' + id)
-}
+  }
+
+
 }
 
 

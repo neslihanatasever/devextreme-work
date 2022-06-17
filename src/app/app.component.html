@@ -5,7 +5,7 @@
     <dxi-location screen="md lg" [row]="0" [col]="0" [colspan]="3"></dxi-location>
     <dxi-location screen="xs sm" [row]="0" [col]="0"></dxi-location>
     <h5>
-      <dx-button class="d" style="color: white" icon="contentlayout"></dx-button>
+      <dx-button class="d" icon="contentlayout"></dx-button>
       <b>
         Talep</b><br>
       Taleplerinizi statülerine göre filtreleyebilir ve istediğiniz verileri görüntüleyebilirsiniz.
@@ -84,11 +84,18 @@
   <dxo-column-fixing [enabled]="true"></dxo-column-fixing>
   //satır sabitlemek
   <dxo-editing caption="İşlemler"
+               mode="popup"
                [allowUpdating]="true"
                [allowDeleting]="true"
                [selectTextOnEditStart]="true">
   </dxo-editing>
-
+  <dxo-popup
+    title="Employee Info"
+    [showTitle]="true"
+    [width]="700"
+    [height]="525"
+  >
+  </dxo-popup>
 
   <dxo-filter-row [visible]="true"></dxo-filter-row>
   <dxo-scrolling columnRenderingMode="virtual"></dxo-scrolling><!--  tablo kaydırma çubuğu-->

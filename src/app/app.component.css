@@ -3,33 +3,40 @@
   font-size: 10px;
   font-weight: 400;
   font-family: Lato, sans-serif;
-  color: #fff;
+  color: #585c5d;
   border-radius: 5px;
   margin-left: 10px;
+
 }
 
-.b {
+::ng-deep .b {
   margin-right: 10px;
   border-radius: 100px;
   background: white;
-  color:#585c5d;
-}
-
-.c {
+  color: #585c5d;
 
 }
-/*::ng-deep . {*/
-/*  color: white;*/
-/*}*/
 
-.d {
+::ng-deep .b .dx-state-active .dx-button-content {
+  background: #fe9d27 !important;
+  color: #fff !important;
+}
+
+::ng-deep .d {
   background-color: transparent;
   position: absolute;
   left: 15px;
+
 }
-.e {
+
+::ng-deep .d .dx-icon {
+  color: white;
+}
+
+::ng-deep .e {
   background-color: transparent;
 }
+
 
 .btn-name {
   position: absolute;
@@ -55,9 +62,11 @@
   margin-top: 25px;
   margin-left: 15px;
 }
-h3{
+
+h3 {
   margin-left: 15px;
 }
+
 h4 {
   background-color: lightblue;
   color: white;
@@ -108,6 +117,7 @@ h5 {
   margin-right: 200px;
 
 }
+
 .button-talep {
   position: absolute;
   right: 25px;
@@ -115,20 +125,25 @@ h5 {
   color: #fff;
   background-color: #8bc34a;
   font-size: 14px;
-  font-family: Lato,sans-serif;
+  font-family: Lato, sans-serif;
   border-radius: 100px;
   line-height: 1.6;
 }
 
-.f{
-  background: transparent;
+::ng-deep .f {
+  background: #6790c7;
+  color: white;
   position: absolute;
   right: 10px;
-  color: #fff;
   font-size: 15px;
-  font-family: Lato,sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: 600;
   margin-top: 50px;
+
+}
+
+::ng-deep .f .dx-icon {
+  color: white;
 }
 
 /*::ng-deep {*/
