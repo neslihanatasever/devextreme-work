@@ -130,3 +130,9 @@ h5 {
   font-weight: 600;
   margin-top: 50px;
 }
+
+/*::ng-deep {*/
+/*  .dx-icon .dx-icon-contentlayout {*/
+/*    color: white;*/
+/*  }*/
+/*}*/
