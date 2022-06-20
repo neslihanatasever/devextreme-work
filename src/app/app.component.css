@@ -9,17 +9,26 @@
 
 }
 
-::ng-deep .b {
+.b {
   margin-right: 10px;
   border-radius: 100px;
   background: white;
-  color: #585c5d;
-
+  color: black;
+  border: transparent!important;
+  margin-left: 10px;
+  padding: 1px;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: Lato,sans-serif;
+  text-align: center;
 }
-
-::ng-deep .b .dx-state-active .dx-button-content {
-  background: #fe9d27 !important;
-  color: #fff !important;
+.b:hover {
+  background-color:orange;
+  color: black;
+}
+.b:active {
+  background-color:blue;
+  color:white;
 }
 
 ::ng-deep .d {
