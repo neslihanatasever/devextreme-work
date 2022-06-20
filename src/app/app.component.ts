@@ -3,7 +3,6 @@ import {allServiceProviders} from "./Services/allService.provider (1)";
 import {DevExpressProviders} from "./Services/dev-express.providers (1)";
 import {endpoints} from "./Help/endpoint";
 
-
 @Component({
   selector: 'app-root',
   styleUrls: ['./app.component.css'],
@@ -19,7 +18,6 @@ export class AppComponent {
   displayMode: any;
   showInfo: any;
   calculateCellValue: any;
-  popupVisible: any;
 
   constructor(private api: allServiceProviders, private dev: DevExpressProviders) {
     // let n = new CollectiveMethod();
@@ -28,12 +26,9 @@ export class AppComponent {
 
     this.dataSource = dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=1')
   }
-
   asd(id: number) {
     this.dataSource = this.dev.getAllDevx('id', endpoints.Request.getRequest.path + '?typeId=' + id)
   }
-
-
 }
 
 
